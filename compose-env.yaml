@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db-cats-api:
+    image: postgres:10
+    restart: always
+    ports:
+        - 5444:5432
+    environment:
+        POSTGRES_DB: cats_api_serv
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: root

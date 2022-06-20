@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cats-api
+  labels:
+    app: cats-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cats-api
+  template:
+    metadata:
+      labels:
+        app: cats-api
+    spec:
+      containers:
+        - name: cats-api
+          image: andr72/cats-api-microserv:1.0.0
+          ports:
+            - containerPort: 8081
+           env:
+             - name: DATASOURCE_HOST
+               value: 192.168.56.1

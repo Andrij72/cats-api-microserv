@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${DATASOURCE_HOST:localhost}:5444/cats_api_serv
+    username: postgres
+    password: root
+server:
+  port: 8095
+#flyway:
+ # lockRetryCount: 10
+
+
